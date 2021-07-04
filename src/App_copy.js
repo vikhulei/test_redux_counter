@@ -1,9 +1,12 @@
 import './App.css';
+import {createStore} from "redux";
 import {useSelector, useDispatch} from "react-redux"
-import {increment} from "./actions"
-import {decrement} from "./actions"
+import {increment} from "./actions_copy"
+import {decrement} from "./actions_copy"
+import counterReducer from "./reducers_copy/counter"
 
 function App() {
+  
 const counter = useSelector(state => state.counter)
 const isLogged = useSelector(state => state.isLogged )
 const dispatch = useDispatch()
